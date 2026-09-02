@@ -1,3 +1,5 @@
+import os
+import uvicorn
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from travelops.graph import TravelGraph
@@ -50,3 +52,8 @@ async def plan_trip(req: PlanRequest):
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+if __name__ == "__main__":
+    # Use PORT environment variable provided by cloud platforms like Railway
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("travelops.api.main:app", host="0.0.0.0", port=port)
