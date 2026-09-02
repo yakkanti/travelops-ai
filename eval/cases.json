@@ -1,0 +1,29 @@
+[
+  {
+    "id": "CASE-001",
+    "request": "Plan a 7-day trip from San Francisco to Japan for two people in April with a $6,000 budget. We like food, hiking and culture.",
+    "expected": {
+        "destination": "Japan",
+        "budget_max": 6000.0,
+        "duration": 7
+    }
+  },
+  {
+    "id": "CASE-002",
+    "request": "Plan a 5-day trip to Paris for two people under $4,000.",
+    "expected": {
+        "destination": "Paris",
+        "budget_max": 4000.0,
+        "duration": 5
+    }
+  },
+  {
+    "id": "CASE-003",
+    "request": "Plan a 3-day family trip to New York.",
+    "expected": {
+        "destination": "New York",
+        "budget_max": null,
+        "duration": 3
+    }
+  }
+]
