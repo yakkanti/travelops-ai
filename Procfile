@@ -1,1 +1,1 @@
-web: python -m travelops.api.main
+web: PYTHONPATH=src python -m travelops.api.main
